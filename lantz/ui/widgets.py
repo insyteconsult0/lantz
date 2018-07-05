@@ -822,7 +822,7 @@ class MagnitudeMixin(WidgetMixin):
         """Get widget value and scale by units.
         """
         if self._units:
-            return super().value() * self._units
+            return Q_(super().value(),self._units)
         return super().value()
 
     def setValue(self, value):
